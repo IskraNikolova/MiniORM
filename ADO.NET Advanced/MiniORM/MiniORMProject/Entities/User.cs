@@ -1,10 +1,10 @@
 ﻿namespace MiniORMProject.Entities
 {
     using System;
-    using Attributes;
+    using MiniORMProject.Attributes;
 
     [Entity(TableName = "Users")]
-    public class User
+    class User
     {
         [Id]
         private int id;
@@ -29,12 +29,56 @@
             this.RegistrationDate = registrationDate;
         }
 
-        public string Username { get; set; }
+        public string Username
+        {
+            get
+            {
+                return this.username;
+            }
 
-        public string Password { get; set; }
+            set
+            {
+                this.username = value;
+            }
+        }
 
-        public int Age { get; set; }
+        public string Password
+        {
+            get
+            {
+                return this.password;
+            }
 
-        public DateTime RegistrationDate { get; set; }
+            set
+            {
+                this.password = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return this.age;
+            }
+
+            set
+            {
+                this.age = value;
+            }
+        }
+
+        public DateTime RegistrationDate
+        {
+            get
+            {
+                return this.registrationDate;
+            }
+
+            set
+            {
+                this.registrationDate = value;
+            }
+        }
     }
 }
