@@ -13,6 +13,8 @@
 
             User user = new User("Iskra", "asd", 35, DateTime.Now);
             context.Persist(user);
+
+
         }
     }
 }
